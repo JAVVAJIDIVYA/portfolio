@@ -3,43 +3,56 @@ import { resumePath } from "@/config/site";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background">
-      {/* Decorative circles */}
-      <div className="absolute top-20 right-[20%] w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-[10%] w-48 h-48 rounded-full bg-primary/5 blur-2xl animate-float-delayed" />
-
-      <div className="container mx-auto px-6 pt-24 pb-16">
-        <div className="max-w-2xl mx-auto text-center space-y-6 fade-in">
-          <p className="text-primary font-medium tracking-wide text-sm uppercase">Hi there, I am</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-            Madithati<br />Induja
-          </h1>
-          <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-            Software Engineer & SAP Specialist
-          </p>
-          <p className="text-muted-foreground max-w-md mx-auto leading-relaxed">
-            Detail-oriented Computer Science professional focused on enterprise systems, full-stack development, and data-driven analysis.
-          </p>
-          <div className="flex gap-4 pt-2 justify-center">
-            <button
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:brightness-110 transition-all"
-            >
-              View My Work
-            </button>
-            <a
-              href={resumePath}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-accent transition-all"
-            >
-              Download Resume
-            </a>
+    <section className="min-h-screen flex items-center bg-[#f4f4f4] py-20">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+          {/* Profile Image Circle */}
+          <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl">
+            <img 
+              src="/src/assets/headshot.jpg.jpeg" 
+              alt="Javvaji Divya" 
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            />
           </div>
-        </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-muted-foreground" size={24} />
+          {/* Text Content */}
+          <div className="max-w-lg space-y-6 text-center md:text-left">
+            <h1 className="text-6xl md:text-8xl font-bold text-black tracking-tighter">
+              Hello
+            </h1>
+            
+            <div className="space-y-3">
+              <h2 className="text-xl font-bold text-black">A Bit About Me</h2>
+              <p className="text-base text-black/80 leading-relaxed font-medium">
+                I'm Javvaji Divya, a CSE Undergraduate specializing in Python, Django, and Full-Stack Development. 
+                I build scalable web solutions and love solving complex backend challenges.
+              </p>
+            </div>
+
+            {/* Circular Buttons */}
+            <div className="flex flex-wrap gap-6 justify-center md:justify-start pt-4">
+              <a
+                href={resumePath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-[#f6a90e] border-2 border-black/10 flex items-center justify-center text-black font-bold text-lg hover:scale-110 transition-transform shadow-lg"
+              >
+                Resume
+              </a>
+              <button
+                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-[#ff3b2f] border-2 border-black/10 flex items-center justify-center text-black font-bold text-lg hover:scale-110 transition-transform shadow-lg"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-[#80d1d4] border-2 border-black/10 flex items-center justify-center text-black font-bold text-lg hover:scale-110 transition-transform shadow-lg"
+              >
+                Contact
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

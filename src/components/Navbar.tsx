@@ -40,23 +40,23 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-lg shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-lg shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-6 py-6 flex items-center justify-between">
         <button
           onClick={() => navigate("/")}
-          className="text-xl font-bold tracking-tight text-foreground"
+          className="text-2xl font-bold tracking-tighter text-black"
         >
-          MI<span className="text-primary">.</span>
+          JD<span className="text-[#ff3b2f]">.</span>
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <button
               key={link.label}
               onClick={() => handleNavClick(link.target)}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-bold text-black/60 hover:text-black transition-colors uppercase tracking-widest"
             >
               {link.label}
             </button>
@@ -65,16 +65,10 @@ const Navbar = () => {
             href={resumePath}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="text-sm font-bold text-black/60 hover:text-black transition-colors uppercase tracking-widest"
           >
             Resume
           </a>
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg text-muted-foreground hover:text-primary transition-colors"
-          >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
         </div>
 
         <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-foreground">

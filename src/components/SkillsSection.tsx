@@ -5,22 +5,22 @@ const skillCategories = [
   {
     title: "Programming",
     icon: Code2,
-    skills: ["Python", "Java", "SAP ABAP", "C", "C++"],
+    skills: ["Python", "SQL", "JavaScript", "C"],
   },
   {
     title: "Web Development",
     icon: Globe,
-    skills: ["React", "Node.js", "Flask", "HTML/CSS", "JavaScript"],
+    skills: ["Django", "Flask", "REST API", "Responsive Design", "HTML/CSS"],
   },
   {
-    title: "Databases",
+    title: "Databases & Tools",
     icon: Database,
-    skills: ["SQL", "MySQL", "MongoDB", "PostgreSQL"],
+    skills: ["SQLite", "MySQL", "Git", "GitHub", "Vercel"],
   },
   {
-    title: "Specialized",
+    title: "Core & Soft Skills",
     icon: Cpu,
-    skills: ["SAP Security", "AI/ML", "Data Analytics", "Cybersecurity", "GenAI"],
+    skills: ["Data Structures", "Debugging", "Problem Solving", "Leadership"],
   },
 ];
 
@@ -28,24 +28,28 @@ const SkillsSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <section id="skills" className="py-24 bg-card">
+    <section id="skills" className="py-24 bg-[#f4f4f4]">
       <div className="container mx-auto px-6" ref={ref}>
-        <h2 className="text-3xl font-bold text-foreground mb-2">Tech Stack</h2>
-        <div className="w-12 h-1 bg-primary rounded mb-12" />
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold text-black tracking-tight">Technical Skills</h2>
+          <div className="w-20 h-1 bg-black mx-auto mt-4" />
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {skillCategories.map((cat) => (
             <div
               key={cat.title}
-              className="p-6 rounded-xl border border-border bg-background hover:border-primary/40 transition-all group"
+              className="space-y-6 text-center md:text-left"
             >
-              <cat.icon size={28} className="text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-foreground mb-3">{cat.title}</h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="w-16 h-16 bg-[#f4f4f4] rounded-full flex items-center justify-center mx-auto md:mx-0 shadow-sm border border-black/5">
+                <cat.icon size={32} className="text-black" />
+              </div>
+              <h3 className="text-2xl font-bold text-black">{cat.title}</h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground font-medium"
+                    className="text-sm px-4 py-2 bg-[#f4f4f4] text-black font-bold rounded-md border border-black/5 shadow-sm"
                   >
                     {skill}
                   </span>

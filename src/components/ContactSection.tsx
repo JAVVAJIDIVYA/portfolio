@@ -5,48 +5,53 @@ const ContactSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-[#f4f4f4]">
       <div className="container mx-auto px-6 text-center" ref={ref}>
-        <h2 className="text-3xl font-bold text-foreground mb-2">Get In Touch</h2>
-        <div className="w-12 h-1 bg-primary rounded mb-8 mx-auto" />
-        <p className="text-muted-foreground mb-10 max-w-md mx-auto">
-          I'm always open to new opportunities and collaborations. Feel free to reach out!
-        </p>
+        <div className="max-w-2xl mx-auto space-y-12">
+          <div className="text-center">
+            <h2 className="text-5xl font-bold text-black tracking-tight">Get In Touch</h2>
+            <div className="w-20 h-1 bg-black mx-auto mt-4" />
+          </div>
+          
+          <p className="text-xl text-black/70 leading-relaxed font-medium">
+            I'm always open to new opportunities and collaborations. Feel free to reach out!
+          </p>
 
-        <div className="flex flex-wrap justify-center gap-6 mb-12">
-          <a
-            href="mailto:madithatiinduja@gmail.com"
-            className="flex items-center gap-3 px-5 py-3 rounded-lg border border-border hover:border-primary/40 text-foreground hover:text-primary transition-all"
-          >
-            <Mail size={18} />
-            <span className="text-sm">madithatiinduja@gmail.com</span>
-          </a>
-          <a
-            href="tel:+919390719199"
-            className="flex items-center gap-3 px-5 py-3 rounded-lg border border-border hover:border-primary/40 text-foreground hover:text-primary transition-all"
-          >
-            <Phone size={18} />
-            <span className="text-sm">+91 9390719199</span>
-          </a>
-        </div>
+          <div className="flex flex-col md:flex-row justify-center gap-8">
+            <a
+              href="mailto:javvajidivya333@gmail.com"
+              className="flex items-center gap-4 px-8 py-4 rounded-full bg-[#f4f4f4] border border-black/5 shadow-sm text-black font-bold hover:scale-105 transition-transform"
+            >
+              <Mail size={24} className="text-[#ff3b2f]" />
+              <span>javvajidivya333@gmail.com</span>
+            </a>
+            <a
+              href="tel:+916281409115"
+              className="flex items-center gap-4 px-8 py-4 rounded-full bg-[#f4f4f4] border border-black/5 shadow-sm text-black font-bold hover:scale-105 transition-transform"
+            >
+              <Phone size={24} className="text-[#f6a90e]" />
+              <span>+91 6281409115</span>
+            </a>
+          </div>
 
-        <div className="flex justify-center gap-4">
-          <a
-            href="https://www.linkedin.com/in/madithati-induja-03999a354/?skipRedirect=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all"
-          >
-            <Linkedin size={20} />
-          </a>
-          <a
-            href="https://github.com/madithatiinduja"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all"
-          >
-            <Github size={20} />
-          </a>
+          <div className="flex justify-center gap-6 pt-8">
+            <a
+              href="https://www.linkedin.com/in/javvaji-divya-2b1330340/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-16 h-16 rounded-full bg-[#f4f4f4] border border-black/5 shadow-sm flex items-center justify-center text-black hover:scale-110 transition-transform"
+            >
+              <Linkedin size={28} />
+            </a>
+            <a
+              href="https://github.com/JAVVAJIDIVYA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-16 h-16 rounded-full bg-[#f4f4f4] border border-black/5 shadow-sm flex items-center justify-center text-black hover:scale-110 transition-transform"
+            >
+              <Github size={28} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

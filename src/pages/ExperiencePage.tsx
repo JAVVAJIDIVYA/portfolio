@@ -3,7 +3,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import Footer from "@/components/Footer";
 
 const ExperiencePage = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen bg-[#f4f4f4]">
     <Navbar />
     <div className="pt-20">
       <ExperienceSection />

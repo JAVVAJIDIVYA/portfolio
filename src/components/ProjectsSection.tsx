@@ -3,46 +3,32 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const projects = [
   {
-    title: "AI-NIDS Project",
-    description: "AI-Based Network Intrusion Detection System using Python and Random Forest ML algorithm with a real-time monitoring dashboard for detecting network threats.",
-    tags: ["Python", "ML", "Random Forest", "Cybersecurity"],
-    github: "https://github.com/madithatiinduja/AI-NIDS-Project",
+    title: "TalkTrade (Fiverr Clone)",
+    description: "Built and deployed a freelance marketplace platform with responsive UI and user workflows. Designed to help students find freelance opportunities.",
+    tags: ["Django", "JavaScript", "Vercel", "HTML/CSS"],
+    github: "https://github.com/JAVVAJIDIVYA/Talktrade",
+    image: "/src/assets/project1.jpg.png", // Corrected path
   },
   {
-    title: "Placement Portal",
-    description: "Web-based portal streamlining campus recruitment with role-based access for Admin, Company & Student. Features drive management, application tracking, async CSV exports, and automated email reminders via Celery.",
-    tags: ["Flask", "Vue.js", "SQLite", "Redis", "Celery", "JWT"],
-    github: "https://github.com/madithatiinduja/placement_portal",
+    title: "Smart Queue Management System",
+    description: "Developed Django-based virtual queue system reducing wait time by 30% with live countdown and delay tracking.",
+    tags: ["Python", "Django", "SQLite", "HTML/CSS"],
+    github: "https://github.com/JAVVAJIDIVYA/Queue-Management-System",
+    image: "/src/assets/project2.jpg.png", // Corrected path
   },
   {
-    title: "PhishGuard",
-    description: "A phishing detection and prevention tool that identifies malicious URLs and emails, protecting users from cyber threats with real-time analysis.",
-    tags: ["Python", "ML", "Cybersecurity"],
-    github: "https://github.com/madithatiinduja/Phisguard",
+    title: "Sentiment Analysis Web App",
+    description: "Developed Flask-based ML application for real-time text classification using REST APIs for prediction handling.",
+    tags: ["Python", "Flask", "ML", "REST API"],
+    github: "https://github.com/JAVVAJIDIVYA/sentiment-analysis-webapp",
+    image: "/src/assets/project3.jpg.png", // Corrected path
   },
   {
-    title: "CineHive",
-    description: "A full-stack movie recommendation platform with collaborative filtering, achieving a 30% improvement in recommendation efficiency.",
-    tags: ["React", "Node.js", "MongoDB", "ML"],
-    github: "https://github.com/madithatiinduja/Movie-recommendation-system",
-  },
-  {
-    title: "Walmart Sales Analytics",
-    description: "Comprehensive data analytics project using complex SQL queries and Python to derive actionable business insights from large-scale retail data.",
-    tags: ["Python", "SQL", "Data Analytics", "Visualization"],
-    github: "https://github.com/madithatiinduja/walmart_sales",
-  },
-  {
-    title: "College Chatbot",
-    description: "Classification-based chatbot to automate responses to frequently asked college-related queries, reducing manual support workload by over 40%.",
-    tags: ["Python", "NLP"],
-    github: "https://github.com/madithatiinduja/College-Chatbot",
-  },
-  {
-    title: "Quiz Master",
-    description: "Automated management platform for subjects, chapters, and quizzes with a scoring engine that generates instant student results and comprehensive admin reports.",
-    tags: ["Python", "Flask", "SQLite"],
-    github: "https://github.com/madithatiinduja/Quiz-Master",
+    title: "Pet Rescue & Management System",
+    description: "Developed Django-based multi-app system with authentication, dashboards, and error handling mechanisms.",
+    tags: ["Python", "Django", "SQLite", "Auth"],
+    github: "https://github.com/Springboard-Internship-2025/Pet-Adoption-and-Rescue-Management-Portal_October_Batch-4_2025/tree/JAVVAJI-DIVYA",
+    image: "/src/assets/project4.jpg.png", // Corrected path
   },
 ];
 
@@ -50,32 +36,70 @@ const ProjectsSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-16 bg-[#f4f4f4]">
       <div className="container mx-auto px-6" ref={ref}>
-        <h2 className="text-3xl font-bold text-foreground mb-2">Projects</h2>
-        <div className="w-12 h-1 bg-primary rounded mb-12" />
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-black tracking-tight">Projects</h2>
+          <div className="w-16 h-1 bg-black mx-auto mt-3" />
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {projects.map((project) => (
+        <div className="space-y-24">
+          {projects.map((project, idx) => (
             <div
               key={project.title}
-              className="group p-6 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all"
+              className={`flex flex-col ${
+                idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } items-center gap-10 md:gap-20`}
             >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+              {/* Project Text */}
+              <div className="flex-1 space-y-4 text-center md:text-left">
+                <h3 className="text-3xl font-bold text-black tracking-tight">
                   {project.title}
                 </h3>
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <ExternalLink size={18} />
-                </a>
+                <p className="text-base text-black/70 leading-relaxed font-medium">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                  {project.tags.map((tag) => (
+                    <span 
+                      key={tag} 
+                      className="text-xs px-3 py-1.5 bg-white text-black font-bold border border-black/5 rounded-md shadow-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="pt-2">
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-black font-bold text-base border-b-2 border-black hover:pb-1 transition-all"
+                  >
+                    View on GitHub <ExternalLink size={18} />
+                  </a>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                    {tag}
-                  </span>
-                ))}
+
+              {/* Project Image Container */}
+              <div className="md:w-1/3 w-full aspect-[4/3] bg-white rounded-2xl overflow-hidden shadow-xl border border-black/5 group">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    // Fallback if image doesn't exist yet
+                    (e.target as HTMLImageElement).style.display = 'none';
+                    const parent = (e.target as HTMLElement).parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="w-full h-full flex items-center justify-center text-black/10 font-black text-2xl">
+                          ${project.title.split(' ')[0]}
+                        </div>
+                      `;
+                    }
+                  }}
+                />
               </div>
             </div>
           ))}
