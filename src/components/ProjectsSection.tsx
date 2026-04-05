@@ -7,28 +7,28 @@ const projects = [
     description: "Built and deployed a freelance marketplace platform with responsive UI and user workflows. Designed to help students find freelance opportunities.",
     tags: ["Django", "JavaScript", "Vercel", "HTML/CSS"],
     github: "https://github.com/JAVVAJIDIVYA/Talktrade",
-    image: "./project1.jpg.png", // Relative path for public folder
+    image: "project1.jpg.png",
   },
   {
     title: "Smart Queue Management System",
     description: "Developed Django-based virtual queue system reducing wait time by 30% with live countdown and delay tracking.",
     tags: ["Python", "Django", "SQLite", "HTML/CSS"],
     github: "https://github.com/JAVVAJIDIVYA/Queue-Management-System",
-    image: "./project2.jpg.png", // Relative path for public folder
+    image: "project2.jpg.png",
   },
   {
     title: "Sentiment Analysis Web App",
     description: "Developed Flask-based ML application for real-time text classification using REST APIs for prediction handling.",
     tags: ["Python", "Flask", "ML", "REST API"],
     github: "https://github.com/JAVVAJIDIVYA/sentiment-analysis-webapp",
-    image: "./project3.jpg.png", // Relative path for public folder
+    image: "project3.jpg.png",
   },
   {
     title: "Pet Rescue & Management System",
     description: "Developed Django-based multi-app system with authentication, dashboards, and error handling mechanisms.",
     tags: ["Python", "Django", "SQLite", "Auth"],
     github: "https://github.com/Springboard-Internship-2025/Pet-Adoption-and-Rescue-Management-Portal_October_Batch-4_2025/tree/JAVVAJI-DIVYA",
-    image: "./project4.jpg.png", // Relative path for public folder
+    image: "project4.jpg.png",
   },
 ];
 
@@ -84,7 +84,7 @@ const ProjectsSection = () => {
               {/* Project Image Container */}
               <div className="md:w-1/3 w-full aspect-[4/3] bg-white rounded-2xl overflow-hidden shadow-xl border border-black/5 group">
                 <img 
-                  src={project.image} 
+                  src={`${import.meta.env.BASE_URL}${project.image}`} 
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   onError={(e) => {

@@ -9,7 +9,7 @@ const HeroSection = () => {
           {/* Profile Image Circle */}
           <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl">
             <img 
-              src="./headshot.jpg.jpeg" 
+              src={`${import.meta.env.BASE_URL}headshot.jpg.jpeg`} 
               alt="Javvaji Divya" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />
