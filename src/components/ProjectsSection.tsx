@@ -7,28 +7,28 @@ const projects = [
     description: "Built and deployed a freelance marketplace platform with responsive UI and user workflows. Designed to help students find freelance opportunities.",
     tags: ["Django", "JavaScript", "Vercel", "HTML/CSS"],
     github: "https://github.com/JAVVAJIDIVYA/Talktrade",
-    image: "./src/assets/project1.jpg.png", // Corrected path
+    image: "./project1.jpg.png", // Relative path for public folder
   },
   {
     title: "Smart Queue Management System",
     description: "Developed Django-based virtual queue system reducing wait time by 30% with live countdown and delay tracking.",
     tags: ["Python", "Django", "SQLite", "HTML/CSS"],
     github: "https://github.com/JAVVAJIDIVYA/Queue-Management-System",
-    image: "./src/assets/project2.jpg.png", // Corrected path
+    image: "./project2.jpg.png", // Relative path for public folder
   },
   {
     title: "Sentiment Analysis Web App",
     description: "Developed Flask-based ML application for real-time text classification using REST APIs for prediction handling.",
     tags: ["Python", "Flask", "ML", "REST API"],
     github: "https://github.com/JAVVAJIDIVYA/sentiment-analysis-webapp",
-    image: "./src/assets/project3.jpg.png", // Corrected path
+    image: "./project3.jpg.png", // Relative path for public folder
   },
   {
     title: "Pet Rescue & Management System",
     description: "Developed Django-based multi-app system with authentication, dashboards, and error handling mechanisms.",
     tags: ["Python", "Django", "SQLite", "Auth"],
     github: "https://github.com/Springboard-Internship-2025/Pet-Adoption-and-Rescue-Management-Portal_October_Batch-4_2025/tree/JAVVAJI-DIVYA",
-    image: "./src/assets/project4.jpg.png", // Corrected path
+    image: "./project4.jpg.png", // Relative path for public folder
   },
 ];
 
