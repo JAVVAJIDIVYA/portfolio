@@ -16,16 +16,17 @@ const HeroSection = () => {
           </div>
 
           {/* Text Content */}
-          <div className="max-w-lg space-y-6 text-center md:text-left">
-            <h1 className="text-6xl md:text-8xl font-bold text-black tracking-tighter">
-              Hello
-            </h1>
+          <div className="max-w-lg space-y-4 text-center md:text-left">
+            <p className="text-xl font-medium text-black/60 tracking-tight">
+              Hello, I'm
+            </p>
             
-            <div className="space-y-3">
-              <h2 className="text-xl font-bold text-black">A Bit About Me</h2>
-              <p className="text-base text-black/80 leading-relaxed font-medium">
-                I'm Javvaji Divya, a CSE Undergraduate specializing in Python, Django, and Full-Stack Development. 
-                I build scalable web solutions and love solving complex backend challenges.
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl font-bold text-[#2563eb] leading-tight tracking-tighter">
+                Javvaji Divya
+              </h1>
+              <p className="text-lg text-black/80 leading-relaxed font-medium">
+                A passionate Computer Science Undergraduate and Full-Stack Developer dedicated to building scalable, efficient, and user-centric web solutions. I specialize in Python and Django, thriving on solving complex backend challenges and bringing creative ideas to life through code.
               </p>
             </div>
 
